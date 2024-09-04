@@ -5,42 +5,38 @@ const modal = document.getElementById('modal');
 const certificateContent = document.getElementById('certificateContent');
 const closeModal = document.querySelector('.close');
 
-// Hide the modal initially
-modal.style.display = 'none';
+// 🚨 Close the modal when the close button is clicked
+closeModal.addEventListener('click', function (){ modal.close(); });
 
-cardForm.addEventListener('submit', function (e) {
-  e.preventDefault();
 
-  // 🚨 Get input values
-  const studentNameInput = document.getElementById('studentName');
-  const personalMessageInput = ;
-  const courseNameInput = ; 
+cardForm.addEventListener('submit', function (event) {
+  event.preventDefault();
 
-  const studentName = studentNameInput.value;
-  const personalMessage = personalMessageInput.value;
-  const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+  // Get input values
+//   const studentNameInput = document.getElementById('studentName');
+//   const personalMessageInput = ;
+//   const courseNameInput = ; 
 
-  if (studentName.trim() === '' || personalMessage.trim() === '') {
-    alert('Please fill in all fields');
-    return;
-  }
+//   const studentName = studentNameInput.value;
+//   const personalMessage = personalMessageInput.value;
+//   const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
 
-  // 🚨 Generate certificate content dynamically
-  certificateContent. = `
-  <h3>${studentName}</h3>
-`;
+//   if (studentName.trim() === '' || personalMessage.trim() === '') {
+//     alert('Please fill in all fields');
+//     return;
+//   }
+
+//   // 🚨 Generate certificate content dynamically
+//   certificateContent. = `
+//   <h3>${studentName}</h3>
+// `;
 
   //  Display the modal
-  modal.style.display = 'block';
+  modal.showModal();
 
-  // Clear the form inputs
-  studentNameInput.value = '';
-  personalMessageInput.value = '';
-  if(courseNameInput) courseNameInput.value = '';
-});
-
-//  🚨 Close the modal when the close button is clicked
-closeModal.('', function () {
-  
+//   // Clear the form inputs
+//   studentNameInput.value = '';
+//   personalMessageInput.value = '';
+//   if(courseNameInput) courseNameInput.value = '';
 });
   
