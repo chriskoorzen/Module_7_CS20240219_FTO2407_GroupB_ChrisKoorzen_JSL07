@@ -1,13 +1,9 @@
 body {
-    font-family: 'Raleway', serif;
+  font-family: 'Raleway', serif;
   text-align: center;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  color: #333;
 }
 
 #cardForm {
@@ -42,42 +38,19 @@ button:hover {
 /* Certificate Modal */
 
 .modal {
-    max-width: 800px;
-    margin: 0 auto; /* Center horizontally */
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-    z-index: 1;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    border: 3px solid #659f8f;
-  }
-  
-
-.modal-content::before {
-  content: "";
-  position: absolute;
-  top: -2px; right: -2px; bottom: -2px; left: -2px;
-  z-index: -1;
-  background: linear-gradient(#659f8f, #5d5f5e);
+  max-width: 800px;
+  border: none;
+  padding: 0;
   border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-.modal-content::after {
-  content: "";
-  position: absolute;
-  top: -1px; right: -1px; bottom: -1px; left: -1px;
-  z-index: -2;
-  background: #fff;
-  border: 1px solid #dc7f5f;
-  border-radius: 15px;
+  
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: inherit;
+  position: relative;
+  border: 3px solid #659f8f;
 }
 
 #certificateContent {
@@ -95,12 +68,23 @@ h1, .modal-content h2, .modal-content p {
 }
 
 .close {
+  display: inline-block;
   color: #dc7f5f;
+  cursor: default;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #dc7f5f;
+  border-radius: 100%;
+}
+
+.close:hover {
+  background-color: lightgray;
+  transition: all 0.5s;
 }
 
 /* Adding a fancy border to the certificate content */
 #certificateContent {
-  background: #f9f9f9 url('path/to/your/decorative-border-image.png') center/contain no-repeat;
+  background: #f0f0f0;
 }
 
 /* Adjust button styles to fit the theme */
@@ -113,3 +97,7 @@ button:hover {
   background-color: #5d5f5e;
 }
 
+.cert-logo {
+  width: 320px;
+  margin-top: 25px;
+}
