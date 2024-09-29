@@ -46,9 +46,7 @@ cardForm.addEventListener('submit', function (event) {
   modal.showModal();
 
   // Clear the form inputs
-  studentNameInput.value = '';
-  personalMessageInput.value = '';
-  courseNameInput.value = '';
+  cardForm.reset();
 
 });
   
